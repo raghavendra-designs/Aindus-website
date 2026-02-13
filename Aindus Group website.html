@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aindus Group | Corporate Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Roboto',sans-serif;
+    color:#333;
+    scroll-behavior:smooth;
+}
+
+/*  HEADER  */
+
+header{
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    padding:1rem 5%;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:1.4rem;
+    cursor:pointer;
+}
+
+.logo-icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all 0.4s ease;
+}
+
+.logo-icon img{
+    width:60px;
+    transition:all 0.4s ease;
+}
+
+.logo-icon:hover{
+    background:#07559A;
+    transform:scale(1.08);
+}
+
+.logo-icon:hover img{
+    content:url('aa ag.png');
+    width:60px;
+}
+
+/* NAVIGATION */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    bottom:-6px;
+    left:0;
+    background:#07559A;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url('Office.jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+    padding-top:80px;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg, rgba(7,85,154,0.85), rgba(17,169,225,0.85));
+}
+
+.hero *{
+    position:relative;
+    z-index:1;
+}
+
+.hero img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:5px solid white;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-family:'Montserrat',sans-serif;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.btn{
+    background:linear-gradient(to right,#07559A,#11A9E1);
+    color:white;
+    padding:0.9rem 2rem;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.4s ease;
+    display:inline-block;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(7,85,154,0.4);
+}
+
+/* SECTIONS  */
+
+section{
+    padding:6rem 5%;
+    text-align:center;
+}
+
+section h2{
+    font-family:'Montserrat',sans-serif;
+    font-size:2.5rem;
+    margin-bottom:2rem;
+}
+
+/* SERVICES  */
+
+.service-cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.card{
+    width:300px;
+    padding:2rem;
+    border-radius:18px;
+    background:rgba(255,255,255,0.95);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card i{
+    font-size:2rem;
+    color:#07559A;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-family:'Montserrat',sans-serif;
+    margin-bottom:10px;
+}
+
+/*  CONTACT */
+
+.contact{
+    background:#f9f9f9;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    font-family:'Roboto';
+}
+
+textarea{
+    min-height:120px;
+    resize:none;
+}
+
+/*  FOOTER  */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:1rem;
+    font-size:0.9rem;
+}
+
+/*  RESPONSIVE  */
+
+@media(max-width:768px){
+    nav ul{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .service-cards{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon">
+            <img src="A.png" alt="Aindus Logo">
+        </div>
+        <span>Aindus Group</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <img src="aa.jpg" alt="Company">
+    <h1>Welcome to Aindus Group</h1>
+    <p>Driving Innovation in E-Commerce, Real Estate & Digital Payments</p>
+    <a href="#services" class="btn">Explore Our Services</a>
+</section>
+
+<section id="about">
+    <h2>About Aindus Group</h2>
+    <p>
+        Aindus Group is a forward-thinking corporate organization delivering modern 
+        solutions in e-commerce, real estate, and digital payments. 
+        Our mission is to empower businesses with scalable, secure, and 
+        innovative technology platforms.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Managed Platforms</h2>
+    <div class="service-cards">
+
+        <div class="card">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Chanmart</h3>
+            <p>Advanced e-commerce platform delivering seamless shopping experiences.</p>
+            <a href="#" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-home"></i>
+            <h3>Gharkhoz</h3>
+            <p>Smart real estate solutions connecting buyers and sellers efficiently.</p>
+            <a href="#" class="btn">Visit</a>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-credit-card"></i>
+            <h3>Zattpay</h3>
+            <p>Secure digital payment ecosystem for modern financial transactions.</p>
+            <a href="#" class="btn">Visit</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button class="btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Aindus Group. All Rights Reserved.
+</footer>
+
+</body>
+</html>
